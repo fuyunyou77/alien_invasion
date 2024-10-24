@@ -2,7 +2,7 @@
  # @Author: fuyunyou
  # @Date: 2024-10-16 18:04:56
  # @LastEditors: fuyunyou
- # @LastEditTime: 2024-10-22 10:21:21
+ # @LastEditTime: 2024-10-24 16:23:02
  # @Description: 
  # @FilePath: \alien_invasion\AlienAttack\alien_invasion.py
 ###
