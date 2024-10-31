@@ -7,6 +7,8 @@
 
 ## vscode安装和python环境配置
 
+第三版书籍中有python和vscode配置的内容（第一章），以及git的基本操作（附录D）。这里补充了github和git bash的相关配置。
+
 1. 下载vscode安装包并安装
 2. 打开vscode，点击左下角的扩展按钮，搜索python，安装python插件
 3. 下载python解释器，本人使用3.12.7版本，书中使用3.7.2版本，下载地址：`https://www.python.org/downloads/`
@@ -19,7 +21,8 @@
 
 1. 下载git安装包并安装，地址：`https://git-scm.com/downloads`
 2. 注册github账号，使用github账号登录vscode，并安装github插件
-3. 将gitbash集成到VS code中（这一步可以不做，但建议做，可以更方便地使用git命令）。
+3. 如果你不喜欢cmd命令行，可以将gitbash集成到VS code中
+   <mark>这一步可以不做，但如果做了，可以更方便地使用git命令，且可以帮你熟悉Linux命令</mark><br>
    在vscode中更改settings.json文件，添加如下内容：
 
     ```json
@@ -46,6 +49,7 @@
 4. 按" ctrl+` "(数字1左边的那个键)，可以快捷呼出终端，确认gitbash已经集成到vscode中，这样就可以使用git命令而无需另外打开gitbash窗口。
 
 5. 使用github插件，可以方便地与github进行交互，包括创建仓库、克隆仓库、推送代码、查看修改内容等。不需要下列命令，但还是给出来：
+
     git的基本操作
     1. git --version 查看git版本
     2. git config --global user.name "你的用户名"
@@ -59,11 +63,11 @@
     10. git remote add origin "仓库地址"  添加远程仓库地址
 
     github的基本操作
-    1. 注册github账号
-    2. 创建一个仓库，仓库名为你的项目名
-    3. 克隆仓库到本地：`git clone 仓库地址`
-    4. 在本地修改代码，然后提交到远程仓库：`git add 文件名` `git commit -m "提交说明"` `git push`
-    5. 在github上查看修改内容
+    11. 注册github账号
+    12. 创建一个仓库，仓库名为你的项目名
+    13. 克隆仓库到本地：`git clone 仓库地址`
+    14. 在本地修改代码，然后提交到远程仓库：`git add 文件名` `git commit -m "提交说明"` `git push`
+    15. 在github上查看修改内容
 
 ### 以上操作在做什么？
 
@@ -78,6 +82,7 @@ vscode是代码编辑器，可以让你方便地编写代码，同时集成了gi
 <mark>注意: git bash中的操作是linux命令，文件路径是以linux风格，而不是windows风格，如果你不明白什么是linux，不熟悉linux命令，可以不更改默认终端，使用powershell或cmd命令行。</mark>
 
 ![20241031114914](https://fuyunyou-note.oss-cn-wuhan-lr.aliyuncs.com/typora-user-images/20241031114914.png)
+
 在终端窗口的右边，展开折叠的选项卡，更换为poweshell或cmd（conmmand prompt）命令行。
 
 ## 使用python虚拟环境
@@ -96,3 +101,5 @@ python开发往往要用到许多第三方库（别人写好发布的代码，�
    6. 在虚拟环境中可以安装第三方库：`pip install 库名`
 
 事实上，在任意位置使用`python -m venv myenv`命令都可以创建虚拟环境，但为了方便管理，建议在项目目录下创建虚拟环境。这样，每个项目的代码和它的依赖库都在一个文件夹中，一目了然，方便管理。作为新手，要在一开始学习的时候养成良好的文件管理，分类归纳的习惯，可以避免很多麻烦，少走许多弯路。
+
+书中也给出了虚拟环境创建的相关内容（第18章），关于虚拟环境的更多内容，可以参考<a href="https://docs.python.org/zh-cn/3/library/venv.html">官方文档</a>、<a href="https://zhuanlan.zhihu.com/p/689181205">知乎文章</a>。

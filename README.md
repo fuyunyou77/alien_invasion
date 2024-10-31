@@ -4,11 +4,7 @@
 
 代码写完之后发现这本书有第三版，我简单看了一下，项目代码没有太大变化，只是加了一个控制游戏帧率的功能，因此本项目代码仍具有参考意义。前面讲python基础语法的部分有一些结构上的变化，更建议按照第三版书籍学习。详细变化参考第三版书中的修订记录。
 
-下面是两版书籍的下载地址：
-
-百度网盘：`https://pan.baidu.com/s/1wXJZYXXLUcWr4nU5CzKi9Q?pwd=lvso`
-
-提取码：lvso
+两版书籍的下载地址：<a href="https://pan.baidu.com/s/1wXJZYXXLUcWr4nU5CzKi9Q?pwd=lvso">百度网盘下载</a>
 
 ## 项目结构
 
@@ -28,8 +24,10 @@ images文件夹存放游戏素材图片，游戏中需要使用的文件是alien
 
 进入AlienAttack文件夹，运行`python alien_invasion.py`命令即可运行游戏。
 
-<mark>详细的配置请查看“python入门项目配置”文件</mark>
+<mark>注意</mark>:详细的环境配置请查看<a href="https://github.com/fuyunyou77/alien_invasion/blob/master/python%E5%85%A5%E9%97%A8%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE.md">python入门项目配置文件</a>
 
 ## 注意事项
 
-游戏中按“q”退出游戏的功能只能在英文输入法下实现，在中文输入法下按“q”无效。
+1.根据第第二版书籍的设计，游戏中按“q”退出游戏的功能只能在英文输入法下实现，在中文输入法下按“q”无效，第三版不知是否更改。
+
+2.更建议按照第三版的书籍进行学习。
