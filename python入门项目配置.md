@@ -21,11 +21,12 @@
 
 1. 下载git安装包并安装，地址：`https://git-scm.com/downloads`
 2. 注册github账号，使用github账号登录vscode，并安装github插件
-3. 如果你不喜欢cmd命令行，可以将gitbash集成到VS code中
+3. 如果你不喜欢cmd命令行，可以将gitbash集成到VS code中。
    <mark>这一步可以不做，但如果做了，可以更方便地使用git命令，且可以帮你熟悉Linux命令</mark><br>
-   在vscode中更改settings.json文件，添加如下内容：
+   在vscode中,按`ctrl+p`，搜索`settings.json`，打开该文件，添加如下内容：
 
     ```json
+    //将git bash集成到vscode中
        "terminal.integrated.profiles.windows": {
            "Git Bash": {
                "path": "D:\\developer\\Git\\bin\\bash.exe",//这里是你自己的的bash路径
@@ -34,7 +35,8 @@
     ```
 
     ```json
-       "terminal.integrated.defaultProfile.windows": "Git Bash", //这里是设置默认的终端
+    //设置默认的终端
+       "terminal.integrated.defaultProfile.windows": "Git Bash",
        //假如你不熟悉linux命令，可以不更改这一条，默认使用powershell或cmd命令行也可以
     ```
 
