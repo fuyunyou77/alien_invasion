@@ -2,7 +2,8 @@
 
 ## 环境配置
 
-推荐vscode + python插件 + python解释器 + 虚拟环境 + git
+工欲善其事，必先利其器。进行合理的环境配置，可以让你大大提升效率。
+本人使用windows系统，vscode + python插件 + python解释器 + 虚拟环境 + git
 
 ## vscode安装和python环境配置
 
@@ -17,21 +18,22 @@
 ### git、github安装和配置
 
 1. 下载git安装包并安装，地址：`https://git-scm.com/downloads`
-2. 学习git的基本操作
-3. 注册github账号，将本地代码上传到github（也可以上传，要搞清楚git和github的区别，主要是要使用git的版本控制功能）
-4. 在vscode中使用git和github，安装git插件，配置git用户名和邮箱，关联github账号。
-5. 将gitbash集成到VS code中。在vscode中更改settings.json文件，添加如下内容：
+2. 注册github账号，使用github账号登录vscode，并安装github插件
+3. 将gitbash集成到VS code中（这一步可以不做，但建议做，可以更方便地使用git命令）。
+   在vscode中更改settings.json文件，添加如下内容：
 
-   ```json
+    ```json
        "terminal.integrated.profiles.windows": {
            "Git Bash": {
-               "path": "D:\\developer\\Git\\bin\\bash.exe",//这里是的的bash路径
+               "path": "D:\\developer\\Git\\bin\\bash.exe",//这里是你自己的的bash路径
            }
            },
-       
+    ```
+
+    ```json
        "terminal.integrated.defaultProfile.windows": "Git Bash", //这里是设置默认的终端
        //假如你不熟悉linux命令，可以不更改这一条，默认使用powershell或cmd命令行也可以
-   ```
+    ```
 
    具体写法如图所示：
 
@@ -41,7 +43,27 @@
 
    ![20241031105553](https://fuyunyou-note.oss-cn-wuhan-lr.aliyuncs.com/typora-user-images/20241031105553.png)
 
-6. 按" ctrl+` "(数字1左边的那个键)，可以快捷呼出终端，确认gitbash已经集成到vscode中，这样就可以使用git命令而无需另外打开gitbash窗口。
+4. 按" ctrl+` "(数字1左边的那个键)，可以快捷呼出终端，确认gitbash已经集成到vscode中，这样就可以使用git命令而无需另外打开gitbash窗口。
+
+5. 使用github插件，可以方便地与github进行交互，包括创建仓库、克隆仓库、推送代码、查看修改内容等。不需要下列命令，但还是给出来：
+    git的基本操作
+    1. git --version 查看git版本
+    2. git config --global user.name "你的用户名"
+    3. git config --global user.email "你的邮箱"
+    4. git init 初始化一个仓库
+    5. git status 查看当前仓库状态
+    6. git add "文件名"  添加文件到暂存区
+    7. git commit -m "提交说明"  提交到本地仓库
+    8. git push 推送到远程仓库
+    9. git pull 从远程仓库拉取代码
+    10. git remote add origin "仓库地址"  添加远程仓库地址
+
+    github的基本操作
+    11. 注册github账号
+    12. 创建一个仓库，仓库名为你的项目名
+    13. 克隆仓库到本地：`git clone 仓库地址`
+    14. 在本地修改代码，然后提交到远程仓库：`git add 文件名` `git commit -m "提交说明"` `git push`
+    15. 在github上查看修改内容
 
 ### 以上操作在做什么？
 
