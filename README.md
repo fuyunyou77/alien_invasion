@@ -28,6 +28,8 @@ images文件夹存放游戏素材图片，游戏中需要使用的文件是alien
 
 进入AlienAttack文件夹，运行`python alien_invasion.py`命令即可运行游戏。
 
+<mark>详细的配置请查看“python入门项目配置”文件</mark>
+
 ## 注意事项
 
 游戏中按“q”退出游戏的功能只能在英文输入法下实现，在中文输入法下按“q”无效。
