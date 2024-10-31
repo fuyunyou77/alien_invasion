@@ -20,7 +20,7 @@ images文件夹存放游戏素材图片，游戏中需要使用的文件是alien
 
 将项目文件夹拷贝到本地，并安装Python环境，本人使用的Python版本为3.12.7，只要别太低应该就行。
 
-在命令行中进入alien_invasion文件夹下，使用`pip -m install -r requirements.txt`命令安装依赖包。
+在命令行中进入alien_invasion文件夹下，使用`pip install -r requirements.txt`命令安装依赖包。
 
 进入AlienAttack文件夹，运行`python alien_invasion.py`命令即可运行游戏。
 
