@@ -59,11 +59,11 @@
     10. git remote add origin "仓库地址"  添加远程仓库地址
 
     github的基本操作
-    11. 注册github账号
-    12. 创建一个仓库，仓库名为你的项目名
-    13. 克隆仓库到本地：`git clone 仓库地址`
-    14. 在本地修改代码，然后提交到远程仓库：`git add 文件名` `git commit -m "提交说明"` `git push`
-    15. 在github上查看修改内容
+    1. 注册github账号
+    2. 创建一个仓库，仓库名为你的项目名
+    3. 克隆仓库到本地：`git clone 仓库地址`
+    4. 在本地修改代码，然后提交到远程仓库：`git add 文件名` `git commit -m "提交说明"` `git push`
+    5. 在github上查看修改内容
 
 ### 以上操作在做什么？
 
