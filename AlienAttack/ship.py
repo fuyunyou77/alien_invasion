@@ -2,16 +2,17 @@
  # @Author: fuyunyou
  # @Date: 2024-10-12 11:51:14
  # @LastEditors: fuyunyou
- # @LastEditTime: 2024-10-17 11:45:36
- # @Description: 
- # @FilePath: \PythonCode\alien_invasion\AlienAttack\ship.py
+ # @LastEditTime: 2024-11-16 14:24:41
+ # @Description:
+ # @FilePath: \alien_invasion\AlienAttack\ship.py
 ###
 import pygame
+import os
 from pygame.sprite import Sprite
 
 class Ship(Sprite):
     """管理飞船的类"""
-    
+
     def __init__(self,ai_game):
         """初始化飞船并设置其位置"""
         super().__init__()
@@ -20,7 +21,8 @@ class Ship(Sprite):
         self.screeen_rect=ai_game.screen.get_rect()
 
         #加载飞船图像并获取其外接矩形
-        self.image=pygame.image.load('../images/ship.bmp')
+        ship_img_path=os.path.join('.','images','ship.bmp')
+        self.image=pygame.image.load(ship_img_path)
         self.rect=self.image.get_rect()
 
         #每个新飞船都始化在屏幕底部

@@ -3,7 +3,7 @@
  # @Date: 2024-10-16 18:04:56
  # @LastEditors: fuyunyou
  # @LastEditTime: 2024-10-25 17:54:05
- # @Description: 
+ # @Description:
  # @FilePath: \PythonCode\alien_invasion\AlienAttack\alien_invasion.py
 ###
 import sys
@@ -23,7 +23,7 @@ class AliensInvasion:
     """管理游戏行为和资源的类"""
 
     def __init__(self):
-        """初始化游戏并创建游戏资源""" 
+        """初始化游戏并创建游戏资源"""
         pygame.init()
         self.settings=Settings()
 
@@ -34,7 +34,7 @@ class AliensInvasion:
         self.settings.screen_height=self.screen.get_rect().height
         #窗口显示
         #self.screen=pygame.display.set_mode((self.settings.screen_width,self.settings.screen_width))
-        
+
         pygame.display.set_caption("Alien Invasion")
 
         #创建一个用于存储游戏统计信息的实例
@@ -60,9 +60,9 @@ class AliensInvasion:
                 self.ship.update()
                 self._update_bullets()
                 self._update_aliens()
-            
+
             self._update_screen()
-            
+
     def _check_events(self):
         """响应按键和鼠标事件"""
         for event in pygame.event.get():
@@ -75,7 +75,7 @@ class AliensInvasion:
             elif event.type==pygame.MOUSEBUTTONDOWN:
                 mouse_pos=pygame.mouse.get_pos()
                 self._check_play_button(mouse_pos)
-    
+
     def _check_play_button(self,mouse_pos):
         """在玩家单击play按钮时开始新游戏"""
         button_clicked=self.play_button.rect.collidepoint(mouse_pos)
@@ -102,7 +102,7 @@ class AliensInvasion:
             pygame.mouse.set_visible(False)
 
     def _check_keydown_events(self,event):
-        
+
         if event.key==pygame.K_RIGHT:
             #向右移动飞船
             self.ship.moving_right=True
@@ -112,7 +112,7 @@ class AliensInvasion:
 
         elif event.key==pygame.K_q:
             #要使用英文输入法的q才有效果
-            sys.exit()   
+            sys.exit()
         elif event.key==pygame.K_SPACE:
             #按下空格发射一颗子弹
             self._fire_bullet()
@@ -160,9 +160,9 @@ class AliensInvasion:
         for bullet in self.bullets.copy():
             if bullet.rect.bottom<=0:
                 self.bullets.remove(bullet)
-        
+
         self._check_bullet_alien_collisions()
-        
+
     def _check_bullet_alien_collisions(self):
         """响应子弹和外星人的碰撞"""
         #检查是否有子弹击中了外星人,如果是就删除相应的子弹和外星人
@@ -262,7 +262,7 @@ class AliensInvasion:
             for bullet in self.bullets.sprites():
                 bullet.draw_bullet()
         self.aliens.draw(self.screen)
-        
+
         #显示得分
         self.sb.show_score()
 
@@ -275,4 +275,3 @@ class AliensInvasion:
 if __name__=='__main__':
     ai=AliensInvasion()
     ai.run_game()
-    

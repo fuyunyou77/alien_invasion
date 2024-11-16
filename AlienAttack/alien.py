@@ -2,11 +2,12 @@
  # @Author: fuyunyou
  # @Date: 2024-10-13 22:56:30
  # @LastEditors: fuyunyou
- # @LastEditTime: 2024-10-16 17:53:58
+ # @LastEditTime: 2024-11-16 14:19:22
  # @Description: 外星人类:包含外星人的一些基本行为和信息
- # @FilePath: \PythonCode\alien_invasion\AlienAttack\alien.py
+ # @FilePath: \alien_invasion\AlienAttack\alien.py
 ###
 import pygame
+import os
 from pygame.sprite import Sprite
 
 class Alien(Sprite):
@@ -17,11 +18,12 @@ class Alien(Sprite):
         super().__init__()
         self.screen=ai_game.screen
         self.settings=ai_game.settings
-        
+
         #加载外星人图像并设置其rect属性
-        self.image=pygame.image.load('../images/alien.bmp')
+        alien_img_path=os.path.join('.','images','alien.bmp')
+        self.image=pygame.image.load(alien_img_path)
         self.rect=self.image.get_rect()
-        
+
         #每个外星人最初都在左上角生成
         self.rect.x=self.rect.width
         self.rect.y=self.rect.height
@@ -39,4 +41,3 @@ class Alien(Sprite):
         """向左或向右移动外星人"""
         self.x+=(self.settings.alien_speed*self.settings.fleet_direction)
         self.rect.x=self.x
-        
